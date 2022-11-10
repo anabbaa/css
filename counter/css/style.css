@@ -1,0 +1,30 @@
+body{
+    height: 100vh;
+    width: 100vw;
+    /*
+you can add here more than one counter to use it in another element
+    */
+    counter-reset: ahmed;
+}
+ul{
+list-style: none;
+margin: 0;
+padding: 0;
+font-size: 2rem;
+}
+ul li::before{
+        /*
+in function counter after called variable you can add +2 this means count add 2 every time so 
+it will be 0 thn2 then 4 you can add negative numbers -2 so it will be -2 -4
+- you cann add streng before it in content like "ID"
+-inside counder it accepts twwo parameter variable of your counter and type of style for example
+counter(ahmed, I)
+    */
+    counter-increment: ahmed;
+content: counter(ahmed);
+width: 4vw;
+height:4vh;
+border-radius: 50%;
+background-color: red;
+
+}

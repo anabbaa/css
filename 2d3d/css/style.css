@@ -1,0 +1,183 @@
+/*
+- transform scale is scretching for widthif value is 1 the same 2 is double negative values 
+-1 flip if you use scale alone needs two values first for x second for y if xou do not write the 
+second value so it will takes the first for the second 
+*/
+.scale {
+    margin: 200px auto;
+    width: 200px;
+    height: 200px;
+    background-color: rgb(255 0 0 / 39%);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 30px;
+    transform: scaleX(2);
+    transform: scaleY(2);
+    transform: scale(2);
+  }
+  /*
+- transfor: turn: it will be in degree or turn it takes negative values
+  */
+  .turn{
+    
+        margin: 200px auto;
+        width: 200px;
+        height: 200px;
+        background-color: rgb(255 0 0 / 39%);
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: bold;
+        font-size: 30px;
+        transform: rotate(45deg);
+        transform: rotate(1turn);
+        transform: rotate(0.5turn);
+        transform: rotate(0.25turn);
+  }
+  /*
+-translate move the item x or y it takes negative values for translate without x or y takes
+two values second values if you dont write will be 0
+  */
+  .translate{
+        margin: 200px auto;
+        width: 200px;
+        height: 200px;
+        background-color: rgb(255 0 0 / 39%);
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: bold;
+        font-size: 30px;
+        transform: translate(-100px, -100px);
+      
+  }
+  /*
+skew is the same of rotate but 90 degree will disappearing the element we have no rotate here
+it takes negative values
+  */
+  .paragraphskew {
+    position: relative;
+    color: white;
+    margin: 20px auto;
+    width: fit-content;
+    padding: 20px;
+  }
+  .paragraphskew::before {
+    content: "";
+    background-color: red;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    transform: skewX(20deg);
+  }
+  .skew{
+    margin: 200px auto;
+    width: 200px;
+    height: 200px;
+    background-color: rgb(255 0 0 / 39%);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 30px;
+    transform: skewX(10deg);
+    transform: skewX(-10deg);
+    transform: skewY(10deg);
+    transform: skewY(-10deg);
+    transform: skew(10deg, 10deg);
+  }
+/*
+  matrix(scaleX(), skewY(), skewX(), scaleY(), translateX(), translateY()) it accept negatives 
+  values you can use instead of it transform but in certain order look at the example
+
+*/
+  .matrix{
+      margin: 200px auto;
+      width: 200px;
+      height: 200px;
+      background-color: rgb(255 0 0 / 39%);
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-weight: bold;
+      font-size: 30px;
+      transform: matrix(1.2, 0.2679, 0, 1.2, 20, 20);
+      transform: translateX(20px) translateY(20px) scaleX(1.2) skewY(15deg) skewX(0deg) scaleY(1.2);
+  }
+  /*
+  transform-origin it makes movment according to the real position of x or y 
+  Syntax
+  Default Values => 50% 50% 0
+  2D Transform => transform-origin(X, Y)
+  3D Transform => transform-origin(X, Y, Z)
+  X-Axis
+  - CSS Unit [px, em, rem]
+  - %
+  - Keyword
+  -- Left = 0%
+  -- Center = 50%
+  -- Right = 100%
+  Y-Axis
+  - CSS Unit [px, em, rem]
+  - %
+  - Keyword
+  -- Top = 0%
+  -- Center = 50%
+  -- Bottom = 100%
+*/
+
+/*
+it accept degree or number accepts negative values 90 degree dissapearing element 180 degree 
+is tuen to another seite
+*/
+.three-d-rotate{
+    margin: 200px auto;
+    width: 200px;
+    height: 200px;
+    background-color: rgb(255 0 0 / 39%);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 30px;
+    transform: rotateX(50deg);
+    transform: rotateY(50deg);
+    transform: rotateZ(50deg);
+    transform: rotate3d(0, 1, 1, 65deg);
+}
+/*
+perspective is to move element to me (user) you sholuld put this option to the father this
+means this element far from user 100px then in transform i can near it to me also i can use
+the option of perspective-origin it is the same of translate origin 
+*/
+.shape {
+  perspective: 300px;
+  perspective-origin: center center;
+}
+.perspective{
+    margin: 200px auto;
+    width: 200px;
+    height: 200px;
+    background-color: rgb(255 0 0 / 39%);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 30px;
+    transform: translate(100px, -100px);
+    transform: translateX(100px);
+    transform: translateZ(100px);
+    transform: translate3d(0, 0, 100px);
+}

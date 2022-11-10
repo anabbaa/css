@@ -1,0 +1,55 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+}
+
+body{
+    height: 100vh;
+    width: 100vw;
+}
+/*
+perspective means how many far away from users
+*/
+.container{
+    height: 100vh;
+    width: 100vw;
+    border: 1px solid red;
+    perspective: 800px;
+
+}
+.father{
+    height: 50%;
+    width:50%;
+    position: relative;
+    margin: 10% auto;
+    transform-style: preserve-3d;
+    transform-origin: right center ;
+}
+.father:hover{
+    transform: translateX(-100%) rotateY(-180deg);
+    transition: transform 3s;
+}
+.front , .back{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    color: #ffff;
+
+}
+/*
+backface-visibility is only to hide the up-side-down of the picture
+*/
+.back{
+    background-color: red;
+    backface-visibility: hidden; 
+}
+.front{
+    background-color: green;
+    transform: rotateY(180deg);
+
+}

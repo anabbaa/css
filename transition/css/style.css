@@ -1,0 +1,35 @@
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  /*
+  i need in it duration delay wait begore you transform from status to status
+   property (is according where you want apply transition look at the
+  example) then timing function and we have:
+     easy it is normal way starting slow then speed then slow
+     ease-in starting slow then normal speed
+     ease-out normal speed ending slow
+     ease-in-out starting slow normal ending slow
+     linear the same speed
+///short hand write the name of property then duration then delay then timing if you want 
+another option in another  property add , look at the example if you want different
+options for every proprty without short hand write transition-property: width,heoght
+and in duration first one for first property second for second if you do not write second value
+so the second property will take the value from the frist value complete short hand look at
+the example
+  */
+  .one {
+    background-color: #EEE;
+    width: 200px;
+    height: 100px;
+    transition-duration: 1s;
+    transition-delay: 0.2s;
+    transition-property: width;
+    transition-timing-function: ease-in-out;
+    transition: all 2s 0.5s linear;
+  }
+  .one:hover {
+    width: 280px;
+    height: 120px;
+  }

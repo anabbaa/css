@@ -1,0 +1,81 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+}
+/*
+if you want to center give height and width to father and element then margin it will be responsive
+*/
+form{
+    margin: 25% auto;
+    height: 50%;
+    width: 50%;
+}
+/*
+input is inline change its behaviour
+*/
+input{
+display: block;
+margin: 5%;
+}
+/*
+father section is only wrapper to centralize our switcher
+*/
+.toggel{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/*
+here we let our input disappearing
+*/
+.switch input{
+    height: 0;
+    width: 0;
+    opacity: 0;
+}
+/*our switch will be relative other will be absolut so they will stay inside switch
+*/
+.switch{
+    position: relative;
+    height: 2vh;
+    width: 4vw;
+
+}
+/*
+here we give our all directons zero so it will be exactaly as its father switch
+*/
+.slider{
+    position:absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgb(0, 229, 255);
+    border-radius: 5rem;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.slider::before{
+    position:absolute;
+    content: "";
+    left: 0.35rem;
+    bottom: 0.20rem;
+    height: 1rem;
+    width: 1rem;
+    background-color: white;
+    border-radius: 100%;
+
+}
+input:checked + .slider {
+    background-color: lightsteelblue;
+  }
+  
+  input:checked + .slider::before {
+    transform: translateX(2.5rem);
+  }
+  

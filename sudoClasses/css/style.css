@@ -1,0 +1,318 @@
+
+
+  /* pseudo elements VS  pseudo classes */
+  /* pseudo-class is a keyword added to a selector that specifies a special state of the
+   selected element(s). */
+  /* pseudo-element is a keyword added to a selector that lets you style a specific part
+   of the selected element(s) */
+/*
+visited if i visited a link so certain styling, empty is empty focsed if user focus any element
+in testing in inspect i can click right on input the force state for example hover and try best
+styling which is fitting you
+-hover if you want to hover athing affect another it wull be nested hover father affect son
+
+*/
+/*
+/*
+/*
+valid and invalid for example
+input:valid
+/*
+
+  Vendors Prefixes
+
+  Chrome
+  Safari
+  Firefox
+  IE, Edge
+  Opera
+
+  [1] New CSS Feature Appeared
+  [2] Browsers Tests The Feature In Version X
+  [3] Browsers Add Prefix To Give Developers The Ability To Use It
+  [4] The Feature Is Fully Supported In Version Y, No Need For Prefix
+
+  -webkit- => Chrome, Safari, New Opera Version
+  -moz- => Firefox
+  -ms- => Ie, Edge
+  -o- => Old Version of Opera
+
+
+*/
+/*
+hover should be in related elements father son or sinlings
+*/
+.one {
+    background-color: red;
+    color: white;
+  }
+  .two {
+    background-color: #EEE;
+    width: 100px;
+    height: 100px;
+  }
+  a {
+    color: green;
+    text-decoration: none;
+  }
+  a:hover {
+    color: red;
+  }
+  a:visited {
+    color: blue;
+  }
+  :empty {
+    border: 10px solid red;
+  }
+  .ch:checked {
+    display: none;
+  }
+  .in:focus {
+    border-color: red;
+    outline: none
+  }
+  .two::first-letter{
+
+    color: red;
+  }
+  .two::first-line{
+    font-size: 22vw;
+  }
+  /*
+selection when user select text you can select any element or whole page
+  */
+  ::selection {
+    background-color: red;
+    color: yellow;
+  }
+  .form::selection {
+    background-color: black;
+    color: yellow;
+  }
+
+  .user {
+    background-color: #eee;
+    width: 50px;
+    margin-right: 20px;
+    padding: 10px;
+    height: 55.5px;
+    float: left;
+    font-size: 50px;
+    text-align: center;
+  }
+  /*
+  if you wanz to add counter define it n father then use it in the content of ::before
+  or after you can also targeted attribute in content by attr(name of your attribute)
+  lastly you can in content targented a link 
+  */
+  .parent {
+    margin-bottom: 20px;
+    overflow: hidden;
+    /*
+you can reset counter for any number you want by default it is 1
+    */
+    counter-increment: members-counter;
+
+  }
+  .one {
+    background-color: #eee;
+    padding: 10px;
+    width: 600px;
+    float: left;
+    position: relative;
+  }
+  .one::after {
+    content: counter(members-counter);
+    position: absolute;
+    background-color: red;
+    color: white;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    font-weight: bold;
+    right: -10px;
+    top: 50%;
+    margin-top: -10px;
+  }
+  /*
+  top 50% that means beins in the middle of the father and to put the element in the center
+  of the father vertical margin.top -10% according to its father height i want half of it
+  */
+  .one::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -10px;
+    width: 0;
+    height: 0;
+    background-color: white;
+    margin-top: -10px;
+    border-style: solid;
+    border-width: 10px;
+    border-color: transparent #009688 transparent transparent;
+  }
+  /*The :fullscreen CSS pseudo-class matches every element which is currently in fullscreen mode.
+   If multiple elements have been put into fullscreen mode, this selects them all.*/
+  /* chrome do not support this one */
+body :fullscreen {
+  color: indianred;
+  background-color: indigo;
+}
+/* Kenan */
+p:last-of-type {
+  color: red;
+  font-style: italic;
+}
+article :last-of-type {
+  color: red;
+}
+
+/* Vivi */
+/* CSS3 syntax --> ::first-line*/
+p {
+  background-color: darkseagreen;
+  font-size: 1rem;
+}
+p::first-line,
+span::first-line {
+  background-color: seagreen;
+}
+/* only works on block level elements, in this example it will not
+  work on <span> because span is an inline element */
+​ div::first-line {
+  color: salmon;
+  background-color: yellow;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-style: italic;
+  font-weight: bolder;
+  word-spacing: 2rem;
+  text-transform: capitalize;
+  text-decoration-line: line-through;
+}
+/* CSS2 syntax --> :first-line */
+​
+  /* the length of the first line depends on many factors,
+  including the width of the element,
+  the width of the document
+  the font size of the text. */
+  ​
+  /* Allowed properties:
+  - all font related properties
+  - all background related properties
+  - the color property
+  - word-spacing
+  - letter-spacing
+  - text-decoration
+  - text-transform
+  - line-height
+  - text-shadow
+  - text-decoration
+  - text-decoration-color
+  - text-decoration-line
+  - text-decoration-style
+  - vertical-align.
+  ​
+  */
+
+  /* Sven */
+  /*
+  The ::slotted() CSS pseudo-element represents any element that has been placed into 
+  a slot inside an HTML template (see Using templates and slots for more information).
+  */
+  ::slotted(p) {
+  font-weight: bold;
+  color: red;
+}
+slot[name="slot1"] {
+  text-decoration: underline;
+}
+slot[name="slot1"] + .siblingA {
+  color: whitesmoke;
+}
+slot[name="slot1"] ~ .siblingB {
+  color: orange;
+}
+slot[name="slot2"] + .siblingC {
+  color: blue;
+}
+
+/* Igal 
+The :focus-visible pseudo-class applies while an element matches the :focus pseudo-class
+ and the UA (User Agent) determines via heuristics that the focus should be made
+  evident on the element. (Many browsers show a "focus ring" by default in this case.)
+*/
+
+input,
+button {
+  margin: 10px;
+}
+.focus-only:focus {
+  outline: 2px solid black;
+}
+.focus-visible-only:focus-visible {
+  outline: 4px dashed darkorange;
+}
+
+/* Iulian */
+/* Form style */
+form {
+  border: black 1px solid;
+  color: gray;
+  padding: 5px;
+}
+/* Input area style */
+input {
+  display: block;
+  padding: 4px;
+}
+/* form:focus-within style*/
+/* represents an element that has Received focus
+     or contains an element that has Received focus */
+​ form:focus-within {
+  background-color: greenyellow;
+  color: black;
+  font-weight: bold;
+}
+
+/* Maryam */
+/* pseudo class : placeholder-shown
+The :placeholder-shown CSS pseudo-class represents any <input> or <textarea> element that 
+is currently displaying placeholder text.
+*/
+​ input {
+  border: 1px solid black;
+  padding: 3px;
+}
+​ input.firstname:placeholder-shown {
+  border-color: teal;
+  background-color: yellowgreen;
+  color: maroon;
+  border-radius: 3px;
+}
+/* pseudo element :: placeholder */
+input.password::placeholder {
+  color: red;
+  font-size: 1;
+  font-style: italic;
+  text-decoration: underline;
+}
+
+/* Omar */
+/*
+read-write
+The :read-write CSS pseudo-class represents an element (such as input or textarea) that is 
+editable by the user.
+*/
+input:-moz-read-only,
+textarea:-moz-read-only,
+input:read-only,
+textarea:read-only {
+  border: 0;
+  box-shadow: none;
+  background-color: white;
+}
+textarea:-moz-read-write,
+textarea:read-write {
+  box-shadow: inset 1px 1px 3px #ccc;
+  border-radius: 5px;
+}

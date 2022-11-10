@@ -1,0 +1,22 @@
+@import url("https://fonts.googleapis.com/css2?family=Akaya+Telivigala&display=swap");
+
+.with-link{
+    font-family: 'Rowdies', cursive;
+}
+@font-face {
+    font-family: Montserrat;
+    
+    src: url("../fonts/Montserrat-ThinItalic.ttf");
+}
+.with-down{
+    font-family: Montserrat;
+}
+
+/*
+you can import font in icon if you downolad the file take the css folder link it to html file
+if you want to import icon in css file import folder path 
+
+-font shorthand style size family for example
+.main{
+    font: italic 1rem roan;
+*/

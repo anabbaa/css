@@ -1,0 +1,116 @@
+div {
+    background-color: red; /* Color Name */
+    background-color: rgb(0 0 0 / 50%); /* Red, Green, Blue, Alpha Channel */
+    background-color: #FF0000; /* Color Hex Code */
+    background-image: url("../imgs/learn-programming.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: left top;
+    background-size: auto;
+    padding: -7px;
+
+  }
+  /*repeat x repeat y we have backgroubd attachment scroll if you want to scroll  ifxes will be
+  in your face always
+  background position accept two values if you don ot write the second value it will be center it
+  accepts px or percentage the first value is left second is top if i want it in center 50% 50%
+
+  //padding
+  if i write three values the fourth will take it from the second it doesnot accept negative values
+  //margin
+  it accepts negative values i can center element by it if the elemnt is 60% from father then i will
+  give th margin 40percent or automatic for example */
+
+  /*
+/*
+  The Margin Collapse
+  [1] Only Vertical Margin Collapse
+  [2] Bigger Margin Wins
+  [3] if there is element between two element so there is no collapse like <hr>
+  [4] Nesting Does Not Prevent Collapse
+*/
+  /* shapes others
+    - span must have something to show shapes or change dispay to block in-line block
+    -div youbcan change its behaviours to inline so we will have shapes in a line
+    -filter: grayscale(1 till 100%) :invert(1 till 100%) blur(px)
+    -./ is same level in the same folder
+    - line we have ip address then port then file name
+    -graxscale you can add percentage or only numbers 
+    //
+    inheirt we have styling inheirted and other not son will inheirt only if they donot have
+    these styling by default user-agent
+    initial back to default
+    unset if the option can be inheirt so inherit if not so back to default
+    revert: back it tp the user agent value
+    //
+    usuful seite
+    css battle 
+    frontend mentor
+    code pin 
+    //
+    width in div because it is block it takes the full width if there is space
+    height if therre is children and we give the heights father will expanded accoring to
+    children height even if it has minmum-height it will expanded
+    //
+  // shortcut .name*3 then tap
+  */
+
+  div {
+  background-color: red;
+  padding: 10px;
+  width: 70%;
+  margin: auto;
+}
+.cir {
+
+    width: 150px;
+    height: 150px;
+    background-color: red;
+    margin: 20px auto;
+    border-radius: 6px;
+    /* border-top-left-radius: 20px 20px;
+    border-bottom-right-radius: 20px; */
+  
+}
+/* border
+The difference between outöine and border border is insider element outline is outside it
+Border and outline outline could not  make a different style for every side and no border 
+radius in outline
+  border-radius:
+  you can screw every angle and every angle has two values
+  // box-sizing: if its content so when i add margin padding border it will add it to the
+  height and width of the element if i put the valiue border-box then it will respect the
+  height and width of the element the best practis is
+  * {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+// 
+   .one {
+  background-color: #EEE !important; 
+}
+
+/* display
+ Block
+
+  - Take Full Width If No Width
+  - Add Line Break
+  - Respect Padding, Margin, Width, Height this means it left spaces in four dimensions
+
+  Inline
+
+  - Do Not Repsepct Width, Height
+  - Respect Padding And Margin [ Just Wight + Left ] 
+  - Do Not Add Line Break
+  - Allow Elements Before And After It in The Same Line
+
+  Inline-Block
+
+  - Allow Elements Before And After It in The Same Line
+  - Respect Padding, Margin, Width, Height
+
+  display none visibility hidden
+  width fit-content the width will adapt with the content its for block element
+  Over-flow: hidden scroll auto or can i applied these values on over-flow x or over-flow y

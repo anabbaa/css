@@ -1,0 +1,58 @@
+/* Shadow y x blur color acept negative values 
+//we have also box shadow it takes six vakues offsety then x blur spread color then type
+    in type we have two things inset or outset it will be either inside bix or outside box
+vertical-align we have top middle and bottom for relation between image and a text
+Decoration line-through under-line
+Transform capitalise for first letter only uppercase lowercase for all letters
+
+spacing
+Letter-spacing accept negative values
+Text-indent
+Line-height 1 = 100% choose1.7
+word-spacing accepts negative values
+white-space: default wrap you can made it no wrap using it when the text reach to the extentet 
+width for a div so it will continue regardless the width of the width
+word-break: if i have a link it will consider as one word so break-word break all it will
+not allowing to go flow from the div so at the end of div it will wrapping
+overflow i have two choices when a text overflow a father so i can hidden or scroll then i need
+text-overflow to elipsis 
+inheirtance
+em one time from father rem one time from root root is 16px 
+  font-variant: small-caps; its only take first letter capital but its in small form zhan the 
+  //others letters
+  no px only ib border 
+    cursor: pointer;
+    pointer-event: none to let the butoon unclibalbe
+*/
+
+
+.topic {
+  background-color: #f9f9f9;
+  color: rebeccapurple;
+  text-shadow: 0 0 0 red;
+}
+.pic {
+    background-color: #f9f9f9;
+    text-align: center;
+    direction: ltr;
+  
+  }
+  img {
+    vertical-align: middle;
+  }
+  .white-space{
+    width: 40vw;
+    height: 10vw;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 55px;
+    border: 1px solid red;
+    caret-color: red;
+  }
+  .break{
+    width: 55vw;
+    word-break: break-all;
+    font-size: 55px;
+
+  }

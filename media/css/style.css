@@ -1,0 +1,26 @@
+/* media */
+/* Mobile */
+
+@media only screen and (max-width: 767px) {
+}
+
+/* tap */
+@media only screen and (min-width: 992px) {
+
+}
+/*  laptop */
+@media only screen and (min-width: 1024px) {
+}
+/* Medium Screens */
+@media only screen and (min-width: 1280px) {
+}
+
+/* Large Screens */
+@media only screen and(min-width: 1440px) {
+}
+
+@media only screen and (min-width: 1680px) {
+}
+
+@media only screen and (min-width: 1920px) {
+}

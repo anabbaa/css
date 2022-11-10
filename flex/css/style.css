@@ -1,0 +1,78 @@
+/*
+  Flexible Box
+  For Parent
+  - display: flex => To Start Flexible Box
+  - flex-direction: row => Default Value
+  - flex-wrap: nowrap => Default Value wrap -reverse
+  - flex-flow: its short hand flex-flow: row wrap;
+  -gives father justify content it will move the contentas a unit vertical we have start end 
+  center space-between space-around (here i will add space before element and after element)
+  if you want both together use space-evently
+  - align-items horzientical
+      default stretch if you increase son it will increase the father and another sons unless
+      you define height for a son we have start end center
+- align-content the difference is that this will takw the whole content and take it the
+side you select alig-items will left spaces between items according to the height of the father
+vertical and in align-content you can apply also space-between space-around space-evently
+  - childern
+     -grow 
+        - defautl 0 no grow if i add it to the father with value 1 and there is space in the 
+        div so the whole element will grow to fit the div
+        -if i add it to a child with value for example 2 and there is a space in the div so 
+        i told that child grow double times than your brothers if there is space
+     -shrink defauelt value 1 no shrink i add a value for the father for example 3 so i 
+     i told it if i decrease the width of div so shrink the tide element in short it has
+     the priority to shrink untill all elemnt in the same size so it stop shrinking
+     -order it is only to chang places bezween element 
+     -basis it is for both height and width it works only in children it did not effect
+     absolute position and if you gives it max-width it will repect it 
+     flex-basis: auto => Default Valu
+     - flex short hand flex: [Flex Grow] [Flex Shrink] [Flex Basis] 0 1 Auto
+     and it is smart it will understand it for example flex: 2 50% it will understand
+     number for grow and shrunk percentage for basis
+  -column-gab for example {colums-cap: 20px;}
+  -gab: {ganb; 22px} 
+  -display: flex-inline to have an element beside the flex
+  
+*/
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  .flex {
+    background-color: #eee;
+    width: 600px;
+    padding: 20px;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: row;
+  }
+  .flex div {
+    background-color: #f00;
+      color: white;
+      width: 25%;
+  
+    text-align: center;
+    padding: 20px;
+  }
+  .two{
+    max-width: 200px;
+    flex-basis: 400px;
+  }
+  .float {
+    overflow: hidden;
+    background-color: #eee;
+    width: 600px;
+    padding: 20px;
+    margin: 20px auto;
+  }
+  .float div {
+    background-color: #f00;
+    color: white;
+    float: right;
+    width: 25%;
+    text-align: center;
+    padding: 20px;
+  }

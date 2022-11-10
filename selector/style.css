@@ -1,0 +1,63 @@
+/* - :first-child
+  - :last-child
+  - :first-of-type
+  - :last-of-type
+  - :only-child
+  - :not(Selectors)
+  - :nth-child(n)
+  - :nth-last-child(n)
+  - :nth-of-type(n)
+  - :nth-last-of-type(n)
+  // nth selection
+  - Select every 3rd list item starting with first 
+li:nth-child(3n - 2) { }
+-Select every 3rd list item starting with 2nd 
+li:nth-child(3n - 1) { }
+- Select every 3rd child item, as long as it has class "el" 
+.el:nth-child(3n) { }
+-  Selects the first 3 elements applied not to ALL children but  only to those matching .picture 
+:nth-child(-n+3 of .picture) {
+}
+- .picture:nth-child(-n+3) {
+  
+     Not the same! 
+     This applies to elements matching .picture 
+     which _also_ match :nth-child(-n+3)  
+}
+-tr:nth-child(4) :nth-child(n + 3):nth-child(-n + 12){
+}
+//
+-  - Element + Other Element => [div + p] direct element after closing one 
+  - Element ~ Other Elements => [p ~ div] sibling 
+  - [Attribute]
+  - Element[Attribute]
+  - [Attribute=Value]
+  - Element[Attribute=Value] => input[type="submit"]
+  - [Attribute~=Value] => Contains A Word
+  - [Attribute*=Value] => Contains A string
+
+/* longTrip long using * -> longTrip long */
+/* longTrip long using ~ -> long  it will be stand alone only word */
+/*
+  - [Attribute^=Value] => Start With A String
+    - :root
+  - :checked
+  - :empty
+  - :disabled
+  - :required
+  - :focus
+  - ::selection
+  - ::placeholder
+  */
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  :root {
+    --my-color: orange;
+    --my-font-size: 3rem;
+    --other-color: rgba(237, 114, 38, 0.5);
+  }
+  

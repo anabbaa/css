@@ -1,0 +1,152 @@
+/*
+  Grid
+  Parent
+  - display: grid | inline-grid
+  - grid-template-columns: when you write one value so it is one column two is two columns and soon
+  when you write 100px then auto so auto will take thw whole conainer you can use function repeat
+  repeat takes two parameters first one who many columns second you can write in px or fr the
+  difference between fr and auto is that auto is shy that means auto fit the content fr 
+  greedy takes the rest width and you can mix between option such 100py auto repeat();
+  -grid-template-rows: the same of column
+  - repeat1, (3, 1fr, 2fr)
+  - in inspecct go to element layout show grid lines to show imaginary grid lines
+- gab first value for rows second for columns
+- you can use here justify content and align items and inside a cell we can move a text horziental
+(justif-self) or vertical(aligh-self) we have in them values start end center stretch also we 
+can use place-self its two above togetherdefault value is auto the first value for align-self 
+second for justify-self example
+.item-a {
+  place-self: center;
+}
+- there is order here
+-grid-template: it is a shorthand it needs two values simple seprated by / for example
+grid-teplate 200px auto / auto 1fr first for row second for colmn
+you can also add areas to thsi as shorthand for example
+grid-template: "head head head" 200py 
+              "foot foot foot" 200px / 1fr 1fr 1fr 
+              let us explain it first three is areas for head it is first row we gives it
+              200py then second streng is areas foot second we gives it 200py then after
+              / we defind dimensions for columns
+  -sizing:
+      - min-content max-content first adjust cell according to the long line the last adjust content
+      to its shortest line
+      -auto-fill auto-fit in teplate i do not know how many column or rows so auto-fill consider
+      that it is still space for more column or row auto-fill it consider it is the end of
+      column or row for example
+      grid-tepmplate-column: repeat(autof--fill, 100px)
+  -subgrid: the children will take the grid of father and we have also display: content which let
+  children act as paren these two options workd only in firefox for example
+  child{display: subgrid}
+  -drid-auto-flow: use it when we add more divs in html and we only defind tww so it add automatcally
+  it takes three values column it add it for column , row it add it as row, and dense it fits the
+  content for example: 
+  grid-auto-flows: column;
+  grid-auto-rows: then define the size
+  grid-auto-colum; then define the sizing
+  
+-we have also minmax function minmax(200px, 400px);
+-for responsive we have   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+minmax inide it in order to be sure in eveery wdth will not let empty space in father
+
+
+*/
+
+    * {
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      ul li {
+        display: inline-block;
+      }
+  
+  .parent {
+    margin: 20px auto;
+    width: 800px;
+    height: 500px;
+    background-color: #ddd;
+    display: grid;
+    grid-template-columns: repeat(2, auto) repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+
+  }
+  .parent div {
+    background-color: red;
+    color: white;
+    padding: 20px;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+  }
+/*
+here is template-area
+*/
+  .page {
+    height: 100vh;
+    background-color: #eee;
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: 50px auto 50px;
+    grid-template-areas:
+      "logo logo nav nav nav nav nav nav nav nav"
+      "cont cont cont cont cont cont cont . side side"
+      "foot foot foot foot foot foot foot foot foot foot";
+  }
+  h2 {
+    grid-area: logo;
+    /* you can disappear any one be display; none 
+    */
+    background-color: red;
+    color: white;
+  }
+  nav {
+    grid-area: nav;
+    background-color: blue;
+    color: white;
+  }
+  section {
+    grid-area: cont;
+    background-color: yellow;
+    color: white;
+  }
+  aside {
+    grid-area: side;
+    background-color: green;
+    color: white;
+  }
+  footer {
+    grid-area: foot;
+    background-color: black;
+    color: white;
+  }
+/*
+span and grid.row or column
+first falue start second is colum not including the end you can use span instead of it
+grid-column 2 / span 3; here thre takes three elemnts thex accepts negative values
+grid-areas take the whole of these it takes four values row-start then row-end then
+column-start then column-end
+*/
+
+  .fathee {
+    margin: 20px auto;
+    width: 800px;
+    height: 500px;
+    background-color: #ddd;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(3, auto);
+    gap: 10px 10px;
+    grid-row: 1 / 5;
+    grid-column: 2 7 6;
+  }
+  .parent div {
+    background-color: red;
+    color: white;
+    padding: 20px;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+  }

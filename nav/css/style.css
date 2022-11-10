@@ -1,0 +1,54 @@
+.navi{
+    width: 100vw;
+    height: 2vh;
+}
+.uli{
+    width: 100%;
+    padding: 0;
+    margin: 0 30% auto;
+    height: 2vh;
+}
+.listi{
+    margin: 5rem;
+    display: inline;
+}
+
+.hamburger-father{
+    height: 22vh;
+    width: 8vw;
+
+}
+.hamburger{
+    width: 4vh;
+    height: 4vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    flex-direction: column;
+    }
+    .hamburger-div{
+        width: 3vw;
+        border: 0.2rem black solid;
+    }
+    .drop-menu{
+        background-color: yellow;
+        height: 18vh;
+        list-style: none;
+        }
+        .word{
+            color: black;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 1.5rem;
+        }
+        .second-line2{
+            display: none;
+        }
+        
+        .first-line1{
+            transform: rotate(0.35turn);
+        }
+        
+        .third-line3{
+            transform: rotate(-0.35turn);
+            position: absolute;
+        }

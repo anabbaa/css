@@ -1,0 +1,54 @@
+/* 
+gives float to parent to let the divs floating then add p element to the same parent and make ckear 
+to it
+
+calculate 
+if you want margin begore and after divs you want one account margin for the amount of divs and if
+you do not want margin before and after it then the whole amount of divs minus one that is the 
+margin you want
+ Content Width Is: 100%
+  6 Spaces  10px * 6 => 60px From Content Width
+  100% - 60px Available Space
+  5 Elements The Width Is: (100% - 60px) / 5
+  another example
+  5 spaces every space 1% then i have still 95% then 95% / 4 (amount of divs) cal(95% / 4)
+
+  opacity 1 full then starting decrease it
+  z-index
+  //list-style
+  type
+  position inside
+  image: url()""
+  best practise none margin 0 padding 0
+  short hand list-style type position image for example list-style i outside url
+
+  //Table-spacing table donot need borders
+
+  //over flow auto it will add scroll to over flow you can add it y or x 
+
+  */
+.parent {
+    background-color: red;
+    padding: 10px;
+  }
+  .parent div {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+    background-color: #eee;
+    width: 25%;
+    float: left;
+  }
+  .clear {
+    clear: both;
+  }
+
+  .cal{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+    background-color: #eee;
+    float: left;
+    width: calc((100% - 60px) / 5);
+    margin-left: 10px;
+  }
