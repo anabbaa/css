@@ -48,11 +48,15 @@ div {
     frontend mentor
     code pin 
     //
-    width in div because it is block it takes the full width if there is space
-    height if therre is children and we give the heights father will expanded accoring to
+    //
+    width: 
+    in div because it is block it takes the full width if there is space
+    height 
+    if therre is children and we give the heights father will expanded accoring to
     children height even if it has minmum-height it will expanded
     //
-  // shortcut .name*3 then tap
+  
+
   */
 
   div {
